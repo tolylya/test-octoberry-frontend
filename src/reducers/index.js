@@ -7,7 +7,7 @@ import articleDetailReducer from './articleDetailReducer';
 import commentsReducer from './commentsReducer';
 
 const rootReducer = combineReducers({
-  article: articlesReducer,
+  articles: articlesReducer,
   articleDetail: articleDetailReducer,
   comments: commentsReducer,
   user: userReducer,
