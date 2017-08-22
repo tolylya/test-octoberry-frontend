@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Feed } from 'semantic-ui-react';
+import { Card, Comment, Header } from 'semantic-ui-react';
 
 import CommentComponent from './CommentComponent.jsx';
 
@@ -17,18 +17,16 @@ class CommentsComponent extends React.PureComponent {
     return (
       <Card fluid>
         <Card.Content>
-          <Card.Header>Comments</Card.Header>
-        </Card.Content>
+          <Comment.Group>
+            <Header as="h3" dividing>Comments</Header>
 
-        <Card.Content>
-          <Feed>
             {comments.map(comment => (
               <CommentComponent
                 key={comment.id}
                 comment={comment}
               />
             ))}
-          </Feed>
+          </Comment.Group>
         </Card.Content>
       </Card>
     );
